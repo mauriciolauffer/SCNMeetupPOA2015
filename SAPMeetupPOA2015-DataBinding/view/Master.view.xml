@@ -1,0 +1,37 @@
+<mvc:View displayBlock="true" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Page title="{i18n>masterTitle}">
+		<content>
+			<Table items="{/Products}" noDataText="{i18n>noData}" growing="true"
+				growingScrollToLoad="true">
+				<columns>
+					<Column>
+						<Text text="{i18n>Id}" />
+					</Column>
+					<Column>
+						<Text text="{i18n>Name}" />
+					</Column>
+					<Column>
+						<Text text="{i18n>Price}" />
+					</Column>
+					<Column>
+						<Text text="{i18n>Rating}" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{ID}" />
+							<Text text="{Name}" />
+							<Text text="{Price}" />
+							<RatingIndicator enabled="false" value="{Rating}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+		<footer>
+			<Bar />
+		</footer>
+	</Page>
+</mvc:View>
